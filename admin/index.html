@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Peluquería Bella Estilo</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Arial, sans-serif;
+      background: #f5f2ee;
+      color: #333;
+    }
+    .message {
+      max-width: 420px;
+      text-align: center;
+      padding: 32px;
+      border-radius: 24px;
+      background: white;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+    }
+    .message h1 {
+      margin-top: 0;
+      font-size: 1.6rem;
+    }
+    .message p {
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    <h1>Panel de administración</h1>
+    <p>Inicia sesión con tu cuenta de Netlify para editar servicios, precios, descripciones y subir fotos de tu trabajo.</p>
+    <p>Si ya estás autenticada, el editor se abrirá a continuación.</p>
+  </div>
+  <script src="https://unpkg.com/netlify-cms-app@^2.0.0/dist/netlify-cms.js"></script>
+</body>
+</html>
