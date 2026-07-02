@@ -1,4 +1,4 @@
-* {
+﻿* {
   box-sizing: border-box;
 }
 
@@ -50,10 +50,6 @@ img {
 
 .hero__content {
   max-width: 560px;
-}
-
-title, .eyebrow {
-  text-transform: uppercase;
 }
 
 .eyebrow {
