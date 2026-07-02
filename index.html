@@ -79,5 +79,34 @@
   <a class="whatsapp-button" href="https://wa.me/5491123456789" target="_blank" rel="noreferrer noopener" aria-label="Enviar mensaje por WhatsApp">
     <span>WhatsApp</span>
   </a>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.init();
+
+        function redirectToAdmin() {
+          window.location.href = '/admin/';
+        }
+
+        window.netlifyIdentity.on('login', function () {
+          redirectToAdmin();
+        });
+
+        window.netlifyIdentity.on('signup', function () {
+          redirectToAdmin();
+        });
+
+        window.netlifyIdentity.on('open', function () {
+          // Optional: handle when the widget is opened.
+        });
+
+        window.netlifyIdentity.on('logout', function () {
+          window.location.href = window.location.pathname;
+        });
+      }
+    });
+  </script>
 </body>
 </html>
