@@ -26,6 +26,7 @@ html, body {
 body {
   min-height: 100vh;
   line-height: 1.65;
+  padding-bottom: 160px;
 }
 
 a {
@@ -152,9 +153,10 @@ img {
 
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   margin-top: 24px;
+  justify-items: center;
 }
 
 .video-card {
@@ -163,18 +165,19 @@ img {
   padding: 0;
   overflow: hidden;
   box-shadow: var(--shadow);
-}
-
-.video-card video {
   width: 100%;
-  border-radius: 20px;
-  display: block;
-  background: #000;
+  max-width: 480px;
 }
 
-.video-card blockquote,
-.video-card blockquote.instagram-media,
-.video-card .instagram-media {
+.instagram-card {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.instagram-card blockquote,
+.instagram-card blockquote.instagram-media,
+.instagram-card .instagram-media {
   width: 100% !important;
   background: transparent !important;
   border: none !important;
@@ -184,8 +187,15 @@ img {
   padding: 0 !important;
 }
 
-.video-card blockquote.instagram-media a {
+.instagram-card blockquote.instagram-media a {
   display: block;
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  background: #000;
 }
 
 .video-card p {
@@ -211,6 +221,17 @@ img {
 
 .instagram-button:hover {
   transform: translateY(-2px);
+}
+
+@media (max-width: 620px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-button,
+  .whatsapp-button {
+    right: 16px;
+  }
 }
 
 .instagram-placeholder {
